@@ -23,7 +23,7 @@ export const Contact = forwardRef<HTMLElement, ContactProps>(
       const dataEmail = { name, email, message };
 
       try {
-        const resp = await fetch("http://localhost:3000/api/emails", {
+        const resp = await fetch("https://wagerhubnet.vercel.app/api/emails", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ type: "contact-resume", payload: dataEmail }),
