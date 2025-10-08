@@ -28,7 +28,10 @@ export const Navigation = ({
   // Cerrar menú al hacer click fuera o presionar Escape
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (mobileMenuRef.current && !mobileMenuRef.current.contains(event.target as Node)) {
+      if (
+        mobileMenuRef.current &&
+        !mobileMenuRef.current.contains(event.target as Node)
+      ) {
         onMenuToggle();
       }
     };
@@ -84,7 +87,11 @@ export const Navigation = ({
           onClick={onThemeToggle}
           className="p-2 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-full hover:from-primary/30 hover:to-secondary/30 transition-all duration-300"
         >
-          {theme === "dark" ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
+          {theme === "dark" ? (
+            <Sun aria-label="Change theme" className="w-4 h-4" />
+          ) : (
+            <Moon aria-label="Change theme" className="w-4 h-4" />
+          )}
         </button>
 
         <div className="relative md:hidden" ref={mobileMenuRef}>
@@ -92,7 +99,11 @@ export const Navigation = ({
             onClick={onMenuToggle}
             className="p-2 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-full hover:from-primary/30 hover:to-secondary/30 transition-all duration-300"
           >
-            {isMenuOpen ? <X className="w-4 h-4" /> : <Menu className="w-4 h-4" />}
+            {isMenuOpen ? (
+              <X aria-label="Close menu" className="w-4 h-4" />
+            ) : (
+              <Menu aria-label="Open menu" className="w-4 h-4" />
+            )}
           </button>
 
           {/* Mobile Navigation Dropdown */}
