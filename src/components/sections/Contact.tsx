@@ -67,10 +67,10 @@ export const Contact = forwardRef<HTMLElement, ContactProps>(
             <div className="grid md:grid-cols-2 gap-12">
               {/* Información de contacto */}
               <div>
-                {/* <h3 className="text-2xl font-bold mb-6 flex items-center gap-2">
-                  <Heart className="w-6 h-6 text-red-500" />
+                <h3 className="text-2xl font-bold mb-6 flex items-center gap-2">
+                  {/* <Heart className="w-6 h-6 text-red-500" /> */}
                   {t.info}
-                </h3> */}
+                </h3>
                 <div className="space-y-6">
                   <div className="flex items-center gap-4">
                     <div className="w-12 h-12 bg-gradient-to-r from-primary to-secondary rounded-xl flex items-center justify-center text-white">
