@@ -8,7 +8,7 @@ export default defineConfig(({ mode }) => ({
     host: "::",
     port: 3000,
     fs: {
-      allow: ["./app"],
+      allow: ["./src"],
       deny: [".env", ".env.*", "*.{crt,pem}", "**/.git/**", "server/**"],
     },
   },
@@ -16,7 +16,7 @@ export default defineConfig(({ mode }) => ({
   base: "/portafolio/",
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "./app"),
+      "@": path.resolve(__dirname, "./src"),
     },
   },
 }));
