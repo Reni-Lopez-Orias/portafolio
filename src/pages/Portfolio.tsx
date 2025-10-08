@@ -1,19 +1,24 @@
-
 import { useState, useEffect, useRef } from "react";
+
+// components
+import { Hero } from "../components/sections/Hero";
 import { Footer } from "../components/layout/Footer";
 import { Header } from "../components/layout/Header";
-import { Navigation } from "../components/layout/Navigation";
-import { Contact } from "../components/sections/Contact";
-import { Hero } from "../components/sections/Hero";
-import { Projects } from "../components/sections/Projects";
 import { Skills } from "../components/sections/Skills";
+import { Contact } from "../components/sections/Contact";
+import { Projects } from "../components/sections/Projects";
+import { Navigation } from "../components/layout/Navigation";
 import { AnimatedBackground } from "../components/ui/AnimatedBackground";
-import { projects } from "../data/projects";
+
+// data
 import { skills } from "../data/skills";
+import { projects } from "../data/projects";
 import { translations } from "../data/translations";
+
+// hooks
+import { useTheme } from "../hooks/useTheme";
 import { useLanguage } from "../hooks/useLanguage";
 import { useMousePosition } from "../hooks/useMousePosition";
-import { useTheme } from "../hooks/useTheme";
 
 export default function Portfolio() {
   const [isVisible, setIsVisible] = useState(false);
@@ -76,7 +81,7 @@ export default function Portfolio() {
 
       <Projects ref={proyectosRef} t={t.projects} projects={projectsData} />
 
-      <Contact ref={contactoRef} t={t.contact} />
+      <Contact language={language} ref={contactoRef} t={t.contact} />
 
       <Footer t={t.footer} />
     </div>
