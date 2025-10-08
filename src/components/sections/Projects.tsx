@@ -9,8 +9,8 @@ interface ProjectsProps {
 
 export const Projects = forwardRef<HTMLElement, ProjectsProps>(({ t, projects }, ref) => {
   return (
-    <section ref={ref} className="py-20 bg-muted/30 relative">
-      <div className="max-w-7xl mx-auto px-6">
+    <section ref={ref} className="pt-16 min-h-screen flex items-center relative">
+      <div className="max-w-7xl mx-auto px-6 w-full">
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold mb-4 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
             {t.title}

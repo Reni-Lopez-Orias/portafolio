@@ -7,8 +7,8 @@ interface HeaderProps {
 
 export const Header = ({ children }: HeaderProps) => {
   return (
-    <header className="fixed top-0 w-full bg-background/95 backdrop-blur-md border-b border-border/50 z-50">
-      <div className="max-w-7xl mx-auto px-6">
+    <header className="fixed top-0 left-0 w-full bg-background/95 backdrop-blur-md border-b border-border/50 z-50">
+      <div className="max-w-7xl mx-auto px-6 w-full">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center gap-3">
             <div className="w-8 h-8 bg-gradient-to-r from-primary to-secondary rounded-lg flex items-center justify-center">

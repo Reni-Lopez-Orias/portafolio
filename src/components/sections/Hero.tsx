@@ -15,14 +15,14 @@ export const Hero = forwardRef<HTMLElement, HeroProps>(({ t, language, isVisible
       <div className="max-w-7xl mx-auto px-6 w-full">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className={`transform transition-all duration-1000 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}>
-            <div className="mb-6">
+            {/* <div className="mb-6">
               <span className="px-4 py-2 bg-gradient-to-r from-primary/20 to-secondary/20 text-primary rounded-full text-sm font-medium flex items-center gap-2 w-fit">
                 <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
                 {t.available}
               </span>
-            </div>
+            </div> */}
 
-            <h1 className="text-5xl sm:text-7xl font-bold mb-8 leading-tight">
+            <h1 className="text-5xl sm:text-7xl font-bold mt-4 mb-8 leading-tight">
               <span className="block">{t.greeting}</span>
               <span className="block bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent animate-pulse">
                 {t.role}
@@ -78,7 +78,7 @@ export const Hero = forwardRef<HTMLElement, HeroProps>(({ t, language, isVisible
 
           <div className={`transform transition-all duration-1000 delay-300 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}>
             <div className="relative">
-              <div className="w-96 h-96 mx-auto">
+              <div className="w-auto sm:w-96 h-96 mx-auto">
                 <div className="absolute inset-0 bg-gradient-to-r from-primary to-secondary rounded-full opacity-20 blur-3xl animate-pulse"></div>
                 <div className="flex items-center justify-center relative w-full h-full bg-gradient-to-br from-card to-muted rounded-3xl p-8 shadow-2xl border border-border/50">
                   <div className="text-center space-y-6">
