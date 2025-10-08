@@ -13,6 +13,7 @@ export default defineConfig(({ mode }) => ({
     },
   },
   plugins: [react()],
+  base: "/portafolio/",
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./app"),
