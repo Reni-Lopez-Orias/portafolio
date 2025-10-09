@@ -63,7 +63,7 @@ export const translations: Record<"es" | "en", Translation> = {
       description: "I create exceptional digital experiences using modern technologies. Specialized in React, Node.js and cloud architectures.",
       viewProjects: "View my projects",
       downloadCV: "Download CV",
-      yearsExperience: "5+ years experience",
+      yearsExperience: "3+ years experience",
       developingSolutions: "Developing innovative solutions",
     },
     skills: {
